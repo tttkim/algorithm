@@ -19,9 +19,7 @@ class Solution {
     
     public List<List<String>> groupStrings(String[] strings) {
         Map<String, List<String>> mapHashToList = new HashMap<>();
-        
-        // Create a hash_value (hashKey) for each string and append the string
-        // to the list of hash values i.e. mapHashToList["abc"] = ["abc", "bcd"]
+
         for (String str : strings) {
             String hashKey = getHash(str);
             if (mapHashToList.get(hashKey) == null) {
