@@ -2,10 +2,11 @@ class Solution {
     public List<List<String>> groupStrings(String[] strings) {
         HashMap<String, List<String>> map = new HashMap<>();
         for (String s : strings) {
+            char[] chars = s.toCharArray();
             char first = s.charAt(0);
             StringBuilder sb = new StringBuilder();
             for (int i = 1; i < s.length(); i++) {
-                sb.append((char) ((s.charAt(i) - s.charAt(i-1) + 26) % 26 + 'a'));
+                sb.append((char) ((chars[i] - chars[i-1] + 26) % 26 + 'a'));
             }
             if (!map.containsKey(sb.toString())) {
                 map.put(sb.toString(), new ArrayList<String>());
