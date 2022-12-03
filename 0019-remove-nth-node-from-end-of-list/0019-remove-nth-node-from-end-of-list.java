@@ -35,7 +35,7 @@ class Solution {
             curr = head;
             prev = post;
         }
-        System.out.println("curr : " + curr.val + " offset : " + offset);
+        // System.out.println("curr : " + curr.val + " offset : " + offset);
         while (offset-- > 0) {
             prev = curr;
             curr = curr.next;
